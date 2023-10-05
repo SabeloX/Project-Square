@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/navbar/Navbar'
 import 'bulma/css/bulma.min.css';
+import 'bulma-carousel/dist/css/bulma-carousel.min.css';
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
