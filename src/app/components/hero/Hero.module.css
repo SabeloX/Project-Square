@@ -1,6 +1,7 @@
 .hero__container {
     width: 100vw;
-    /* height: 90vh; */
+    margin-bottom: 3.25rem !important;
+    padding: 0 !important;
 }
 
 .hero__image {
@@ -25,5 +26,5 @@
 .hero__content {
     position: relative;
     gap: 10px;
-    top: 30px;
+    top: 80px;
 }

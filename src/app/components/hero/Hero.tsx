@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 
 export const Hero = () => {
     return (
-        <section className={`${styles.hero__container} is-fullheight-with-navbar hero`}>
+        <>
             <Image
                 fill
                 alt="background hero"
@@ -13,13 +13,15 @@ export const Hero = () => {
                 loading="lazy"
                 className={styles.hero__image}
             />
-            <div className={`hero-body `}>
-                <div className={`${styles.hero__content} is-flex is-flex-direction-column`}>
-                    <p className={`${styles.hero__text} is-size-1 title`}>Live with Confidence</p>
-                    <p className={`${styles.hero__text} subtitle`}>José Mourinho brings confidence to pan-African Sanlam campaign.</p>
-                    <button className={`is-borderless is-rounded button ${styles.hero__button}`}>View Project</button>
+            <section className={`container ${styles.hero__container} is-fullheight-with-navbar hero`}>
+                <div className={`hero-body p-5`}>
+                    <div className={`${styles.hero__content} is-flex is-flex-direction-column`}>
+                        <p className={`${styles.hero__text} is-size-1 title`}>Live with Confidence</p>
+                        <p className={`${styles.hero__text} subtitle`}>José Mourinho brings confidence to pan-African Sanlam campaign.</p>
+                        <button className={`is-borderless is-rounded button ${styles.hero__button}`}>View Project</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     )
 }
