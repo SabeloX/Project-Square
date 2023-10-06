@@ -1,9 +1,10 @@
 import { Navbar } from '@/components/navbar/Navbar'
 import 'bulma/css/bulma.min.css';
-import 'bulma-carousel/dist/css/bulma-carousel.min.css';
+import '@mantine/carousel/styles.css';
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { MantineProvider } from '@mantine/core';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        {children}
+        <MantineProvider>
+          <Navbar/>
+          {children}
+        </MantineProvider>
       </body>
     </html>
   )

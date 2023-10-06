@@ -29,3 +29,7 @@
 .blackText {
   color: var(--textBlack)
 }
+
+.imageStyles {
+  object-fit: cover;
+}
