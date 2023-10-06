@@ -33,7 +33,7 @@ const servicesData: ServicesType[] = [
 export const WhatWeDo = () => {
     return (
         <Shell heading="What we do">
-            <p className={`title`}>
+            <p className={`title blackText`}>
                 We offer a complete range of bespoke design and development services to help you turn your ideas into digital masterpieces
             </p>
             <div className="columns is-8">

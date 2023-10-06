@@ -2,6 +2,7 @@ import { CaseStudy, getCaseStudies } from '@/utils/case_studies'
 import { CaseStudies } from './components/case_studies/CaseStudies'
 import { Hero } from './components/hero/Hero'
 import { WhatWeDo } from './components/what_we_do/WhatWeDo'
+import { Industries } from './components/industries/Industries';
 
 export default async function Home() {
   const data = await getCaseStudies();
@@ -10,6 +11,7 @@ export default async function Home() {
       <Hero />
       <WhatWeDo />
       <CaseStudies data={data} />
+      <Industries/>
     </div>
   )
 }
