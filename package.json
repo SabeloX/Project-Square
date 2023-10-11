@@ -11,6 +11,11 @@
   },
   "dependencies": {
     "@creativebulma/bulma-collapsible": "^1.0.4",
+    "@mantine/carousel": "^7.1.2",
+    "@mantine/core": "^7.1.2",
+    "@mantine/hooks": "^7.1.2",
+    "embla-carousel-autoplay": "^8.0.0-rc14",
+    "embla-carousel-react": "^7.1.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18"

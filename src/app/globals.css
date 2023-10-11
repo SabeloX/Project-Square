@@ -23,11 +23,11 @@
 }
 
 .whiteText {
-  color: var(--textWhite);
+  color: var(--textWhite) !important;
 }
 
 .blackText {
-  color: var(--textBlack)
+  color: var(--textBlack) !important
 }
 
 .imageStyles {
