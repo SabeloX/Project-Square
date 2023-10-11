@@ -1,6 +1,10 @@
 import { Shell } from "@/components/shell/Shell"
 import styles from "./Contact.module.css";
 
+/**
+ * Contact functional component.
+ * @returns {JSX.Element} The Contact component JSX.
+ */
 export const Contact = () => {
     return (
         <div className={`mt-6 py-5 ${styles.contact__container}`}>

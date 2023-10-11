@@ -1,38 +1,44 @@
 "use client"
 import { Shell } from "@/components/shell/Shell"
 import { CaseStudy } from "@/utils/case_studies"
-import PropTypes from "prop-types";
 import styles from "./CaseStudies.module.css";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Carousel } from "@mantine/carousel";
 import { MantineProvider } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
-// import { Carousel } from "@/components/carousel/Carousel";
 
+/**
+ * @property {CaseStudy[] | null} data - An array of case study data or null if no data is available.
+ */
 export interface CaseStudiesProps {
     data: CaseStudy[] | null;
 }
 
+/**
+ * Renders a carousel of case studies.
+ *
+ * @param {CaseStudiesProps} props - The component's props.
+ * @returns {JSX.Element} The rendered component.
+ */
 export const CaseStudies = ({ data }: CaseStudiesProps) => {
-    const autoplay = useRef<any>(Autoplay({ delay: 2000 }));
+    const autoplay = useRef<any>(Autoplay({ delay: 2500 }));
     return(
         <Shell heading="Case studies">
             <MantineProvider>
             {
                 data &&
                     <div style={{ width: "100%"}} className="carousel" id="carousel-container">
-                        {/* <Carousel data={data}/> */}
                         <Carousel
-                            height={200}
                             slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
                             slideGap={{ base: 0, sm: 'md' }}
                             loop
+                            draggable={false}
+                            withControls={false}
                             maw={360}
                             align="start"
-                            // slidesToScroll={3}
-                            plugins={[autoplay.current]}
                             onMouseEnter={autoplay.current.stop}
                             onMouseLeave={autoplay.current.reset}
+                            plugins={[autoplay.current]}
                         >
                             {
                                 data.map((item, index) => (
@@ -60,12 +66,4 @@ export const CaseStudies = ({ data }: CaseStudiesProps) => {
                 </MantineProvider>
         </Shell>
     )
-}
-
-CaseStudies.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired
-    })).isRequired
 }

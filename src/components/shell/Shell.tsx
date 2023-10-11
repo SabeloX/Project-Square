@@ -9,6 +9,15 @@ export interface ShellProps {
     textColor?: "whiteText" | "blackText";
 }
 
+/**
+ * The Shell component represents a container with a heading and content.
+ * @param {ShellProps} props - The properties of the Shell component.
+ * @param {string} props.heading - The heading or title for the shell.
+ * @param {ReactNode} props.children - The content to be displayed within the shell.
+ * @param {string} [props.className] - Additional CSS class name for customization.
+ * @param {("whiteText" | "blackText")} [props.textColor] - The text color for the heading.
+ * @returns {JSX.Element} The Shell component JSX.
+ */
 export const Shell = ({ heading, children, className, textColor = "blackText" }: ShellProps) => {
     return (
         <div className={`container mt-6 ${styles.shell__container} is-flex is-flex-direction-column ${className}`}>

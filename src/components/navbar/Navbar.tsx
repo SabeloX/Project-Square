@@ -3,6 +3,10 @@ import Image from "next/image";
 import styles from "./Navbar.module.css";
 import { useState } from "react";
 
+/**
+ * The Navbar component represents the navigation bar of the website.
+ * @returns {JSX.Element} The Navbar component JSX.
+ */
 export const Navbar = () => {
     const [isActive, setIsActive] = useState<"" | "is-active">("");
 

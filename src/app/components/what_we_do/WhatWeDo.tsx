@@ -1,12 +1,22 @@
 import { Shell } from "@/components/shell/Shell"
 import Image from "next/image"
 
+/**
+ * Represents the type for services data.
+ * @property {string} title - The title of the service.
+ * @property {string} content - The content or description of the service.
+ * @property {string} icon - The filename of the service's icon.
+ */
 type ServicesType = {
     title: string;
     content: string;
     icon: string;
 }
 
+/**
+ * An array containing information about various services.
+ * @type {ServicesType[]}
+ */
 const servicesData: ServicesType[] = [
     {
         title: "Web development",
@@ -30,6 +40,10 @@ const servicesData: ServicesType[] = [
     }
 ]
 
+/**
+ * The component representing "What We Do" section.
+ * @returns {JSX.Element} The "What We Do" component JSX.
+ */
 export const WhatWeDo = () => {
     return (
         <Shell heading="What we do">

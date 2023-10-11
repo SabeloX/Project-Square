@@ -4,6 +4,10 @@ import styles from "./Industries.module.css";
 
 const brands = ["visa", "tyme-bank", "distell", "spotify", "microsoft", "engen", "nike", "wesgrow", "multichoice", "pnp", "liquid", "tfg", "sanlam", "santam", "bbc"]
 
+/**
+ * A React component that displays a list of trusted brands in separate columns.
+ * @returns {JSX.Element} The Industries component JSX.
+ */
 export const Industries = () => {
     return (
         <Shell heading="You’ll be in good company">

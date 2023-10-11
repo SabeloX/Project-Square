@@ -1,6 +1,10 @@
 import Image from "next/image";
 import styles from "./Hero.module.css";
 
+/**
+ * The Hero component displays a hero section with an image and content.
+ * @returns {JSX.Element} The Hero component JSX.
+ */
 export const Hero = () => {
     return (
         <>
