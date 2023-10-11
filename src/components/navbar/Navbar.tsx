@@ -53,7 +53,7 @@ export const Navbar = () => {
                 <div className={`navbar-end ${isActive === "" && "is-hidden-touch"}`}>
                     <div className="navbar-item">
                         <a className={`button is-rounded`}>
-                            <strong className={styles.nav__button__font}>Let's Talk</strong>
+                            <strong className={styles.nav__button__font}>{"Let's Talk"}</strong>
                         </a>
                     </div>
                 </div>

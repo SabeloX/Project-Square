@@ -10,13 +10,13 @@ export const Contact = () => {
         <div className={`mt-6 py-5 ${styles.contact__container}`}>
             <Shell heading="Contact us" textColor="whiteText">
                 <div className="my-3 is-flex is-flex-wrap-wrap	 is-justify-content-space-between">
-                    <p className="whiteText title">Have a project in mind?<br />Let's make it happen</p>
+                    <p className="whiteText title">Have a project in mind?<br />{"Let's make it happen"}</p>
                     <div>
                         <p className="whiteText">
                             22 Street Name, Suburb, 8000,<br/>
                             Cape Town, South Africa<br/>
-                            +27 21 431 0001<br/>
-                            enquirie@website.co.za
+                            {"+27 21 431 0001"}<br/>
+                            {"enquirie@website.co.za"}
                         </p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export const Contact = () => {
                     </p>
                     <p className="column whiteText">
                         Explore open jobs<br/><br/>
-                        ©2000—2023 Company Name
+                        {"©2000—2023 Company Name"}
                     </p>
                 </div>
             </Shell>
