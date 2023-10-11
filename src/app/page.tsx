@@ -1,9 +1,9 @@
-import { CaseStudy, getCaseStudies } from '@/utils/case_studies'
-import { CaseStudies } from './components/case_studies/CaseStudies'
-import { Hero } from './components/hero/Hero'
-import { WhatWeDo } from './components/what_we_do/WhatWeDo'
-import { Industries } from './components/industries/Industries';
-import { Contact } from './components/contact/contact';
+import { getCaseStudies } from '@/utils/case_studies'
+import { CaseStudies } from './sections/case_studies/CaseStudies'
+import { Hero } from './sections/hero/Hero'
+import { WhatWeDo } from './sections/what_we_do/WhatWeDo'
+import { Industries } from './sections/industries/Industries';
+import { Contact } from './sections/contact/contact';
 
 /**
  * The Home component represents the main page of the website.
