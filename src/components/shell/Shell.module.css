@@ -4,4 +4,5 @@
 
 .shell__container {
     gap: 20px;
+    width: 100%;
 }
