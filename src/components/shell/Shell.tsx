@@ -6,9 +6,10 @@ export interface ShellProps {
     heading: string;
     children: ReactNode;
     className?: string;
+    textColor?: "whiteText" | "blackText";
 }
 
-export const Shell = ({ heading, children, className }: ShellProps) => {
+export const Shell = ({ heading, children, className, textColor = "blackText" }: ShellProps) => {
     return (
         <div className={`container mt-6 ${styles.shell__container} is-flex is-flex-direction-column ${className}`}>
             <div className={`is-flex ${styles.shell__headingContainer}`}>
@@ -18,7 +19,7 @@ export const Shell = ({ heading, children, className }: ShellProps) => {
                     height={2}
                     alt="minus icon"
                 />
-                <p>{heading}</p>
+                <p className={textColor}>{heading}</p>
             </div>
             { children }
         </div>
