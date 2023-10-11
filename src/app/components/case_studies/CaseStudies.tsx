@@ -3,49 +3,23 @@ import { Shell } from "@/components/shell/Shell"
 import { CaseStudy } from "@/utils/case_studies"
 import PropTypes from "prop-types";
 import styles from "./CaseStudies.module.css";
-import AliceCarousel from "react-alice-carousel";
+import { useEffect } from "react";
+import { Carousel } from "@/components/carousel/Carousel";
 
 export interface CaseStudiesProps {
     data: CaseStudy[] | null;
 }
 
 export const CaseStudies = ({ data }: CaseStudiesProps) => {
+    useEffect(() => {
+    }, []);
     return(
-        <Shell heading="Case studies" className={`${styles.caseStudy__containers}`}>
+        <Shell heading="Case studies">
             {
                 data &&
-                <AliceCarousel
-                    items={
-                        data.map((item, index) => (
-                            <div
-                                key={index + item.title}
-                                className={`card is-flex is-align-items-end ${styles.caseStudy__cardContainer}`}
-                                style={{
-                                    backgroundImage: `url(${item.imageUrl})`
-                                }}
-                            >
-                                <div className="card-content">
-                                    <p className={`title whiteText`}>{item.title}</p>
-                                    <p className={`content whiteText`}>{item.description}</p>
-                                </div>
-                                {/* <Image loading="lazy" className={`px-2 imageStyles ${styles.caseStudy__image}`} src={item.imageUrl} width={400} height={400} alt={item.title} /> */}
-                            </div>
-                        ))
-                    }
-                    infinite
-                    autoPlay
-                    autoPlayInterval={2500}
-                    animationType="fadeout"
-                    responsive={{
-                        0: {
-                            items: 1,
-                        },
-                        1024: {
-                            items: 3,
-                            itemsFit: 'contain',
-                        }
-                      }}
-                />
+                    <div style={{ width: "100%"}} className="carousel" id="carousel-container">
+                        <Carousel data={data}/>
+                    </div>
             }
         </Shell>
     )
