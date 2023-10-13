@@ -2,6 +2,10 @@
 
 A fully responsive landing page that utilises an external API to retrieve data (case studies).
 
+## Demo
+
+Visit the hosted version on https://project-square.vercel.app/
+
 ## Installation & Running
 
 First clone the project:
