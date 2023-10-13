@@ -23,7 +23,7 @@ export interface CaseStudiesProps {
 export const CaseStudies = ({ data }: CaseStudiesProps) => {
     const autoplay = useRef<any>(Autoplay({ delay: 2500 }));
     return(
-        <Shell heading="Case studies">
+        <Shell id="Cases" heading="Case studies">
             <MantineProvider>
             {
                 data &&
